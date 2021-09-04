@@ -10,19 +10,21 @@
 }
 
 html {
+background: var(--white);
+
     font-family: 'Segoe UI', sans-serif;
+    color: var(--black);
 
     font-size: 62.5%; 
     
     --blue: #006c7dd9;
-    --black: rgba(0, 0, 0, 0.5);
+    --black: rgba(0, 0, 0, 0.7);
     --white: rgba(255, 255, 255, 0.5);
+    --fundobg: #F2F3F7;
 }
 
-body, button, input, textarea {
-    font-size: clamp(14px, 1.9rem, 2vw);
-
-  
+body, button, input, textarea, fieldset, select, placeholder {
+    font-size: clamp(14px, 1.9rem, 2vw);  
 }
 
 ul, ol, li {

@@ -11,4 +11,16 @@ function cursorlink() {
 
  }
 
- 
+//  // categoria para retirada do layout
+
+//  const vanish = document.querySelectorAll('disappear')
+
+//  function remove(vanish) {
+
+//     document
+//         .querySelector
+//         .vanish
+//         .classList
+//         .remove('appear');
+
+//  }

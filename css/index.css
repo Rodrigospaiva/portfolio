@@ -1,50 +1,17 @@
 @charset "UTF-8";
 
-/****************** Responsivo *******************/
-@media (max-width: 870px) {
-    #cabecalho {
-        min-height: 85px;
-    }
-
-    .menu-principal {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .logo-escrito {
-        padding-bottom: .4rem
-    }
-
-    .celular {
-        padding-top: .4rem;
-        border-top: 2px solid;
-        border-image: linear-gradient(to right, transparent, var(--blue), transparent) 1;
-    }
-
-    .container-topo h1 {
-        text-shadow: 0px 0px 2px var(--black);
-    }
-    
-    .container-topo .nav1 {    
-        width: 12vw;
-        height: 300px;
-        display: block;
-        text-transform: uppercase;
-        text-shadow: 0 0 1em;
-    }
-
-}
 
 /****************** Cabeçalho *******************/
 #inicio {
-    position: relative;
-    background-image: url(../img/pexels-david-underland-3237941.jpg);
-    background-position: top center;
+   
+    display: block;
+    background-image: url(../img/backgrounds/1.jpg);
+
+    background-position: center;
     background-position-y: 1px;
     background-position-x: -1px;
     background-repeat: no-repeat;
-    background-size: 100vw;
-    height: 100vh;
+    background-size: cover;
 }
 
 /*
@@ -70,7 +37,7 @@
 
 #cabecalho {
     width: 100%;
-    height: 45px;
+    height: 3em;
     display: block;
     background: rgb(255, 255, 255);
 }
@@ -91,7 +58,7 @@
 .celular {
     display: flex;
     align-items: center;
-    width: 380px;
+    width: 400px-;
 }
 
 .celular div img:first-child {
@@ -106,12 +73,13 @@
     font-weight: 500;
     height: 100%;
     width: 120px;
+    color: var(--black);
 }
 
 .celular div:last-child {
     font-weight: 500;
-    font-size: 1.8em;
-    padding-bottom: 5px;
+    font-size: 1.7em;
+    padding-bottom: 1rem;
 }
 
 .celular a {
@@ -132,41 +100,43 @@
 }
 
 .container-topo img {
-    margin-top: -50px;
     min-width: 100px;
     width: 12vw;
-    opacity: 1;
+    opacity: 0.95;
 }
 .container-topo h1 {
     padding-top: 40px;
-    color: var(--blue);
+    color: black;
     text-transform: uppercase;
-    text-shadow: 0px 10px 4px var(--black), 0px 0px 4px var(--white);
-    font-size: 2rem;
+    text-shadow: 0px 10px 4px var(--black), 0px 0px 4px var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
+    font-size: 1.2em;
 }
 
 .container-topo .nav1 {    
     width: 12vw;
     height: 300px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content:center;
     text-transform: uppercase;
-    text-shadow: 0 0 1em;
+    text-shadow: 1px 1px 1em var(--white), 1px 1px 1em var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
 }
 
-.nav1 a {
+.container-topo .nav1 a {
     text-decoration: none;
     line-height: em;
     font-size: 1.1em;
-    color: var(--blue);
+    color: black;
     font-weight: 500;
     border-bottom: 1px solid transparent;
     transition: all 0.3s;
+    text-shadow: 0px 5px 4px var(--black), 0px 0px 4px var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
+
 }
 
 .container-topo .nav1 a:hover {
-    border-bottom: 1px solid;
-    border-image: linear-gradient(to right, transparent, var(--blue), transparent) 1;
-    padding-bottom: 5px;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 1rem;
 }
 
 
@@ -184,26 +154,25 @@
 
 #sobre {
     border-top: 10px solid;
-    padding-top: 70px;
-    border-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255), black) 60;
-    height: 600px;
+    border-image: linear-gradient(to right, var(--blue), transparent, var(--blue)) 60;
 }
 
 .sobre-container {
     display: flex;
     justify-content: center;
+    margin: 5em auto;
 }
 
 .sobre-info {
     margin-top: 100px;
-    background-image: radial-gradient(circle 20em, rgba(0, 0, 0, 0.2), #fff);
+    background-image: radial-gradient(circle 20em, rgba(0, 0, 0, 0.3), transparent);
     display: flex;
     align-items: center;
     height: 200px;
 }
 
 .dev {
-    width: 680px;
+    width: 100%;
     text-align: left;
 }
 
@@ -233,14 +202,14 @@
 }
 
 .quote p {
-    padding: 20px 0;
+    padding: 1rem 0;
 }
 
 blockquote::before {
     content: open-quote;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5rem;
-    color: #006d7dff;
+    color: var(--blue);
 }
 
 .quote p:last-of-type::after {
@@ -249,15 +218,21 @@ blockquote::before {
     content: close-quote;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5rem;
-    color: #006d7dff;
+    color: var(--blue);
 }
 
 blockquote {
     padding: 1em 0 1.3em;
 }
 
+@media (max-width: 870px) {
+    .quote {
+        display: none;
+    }
+}
+
 .label:not(p:nth-child(2)){
-    color: #006d7dff;
+    color: var(--blue);
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 500;
@@ -273,72 +248,65 @@ blockquote {
     /* border: 1px solid black; */
 }
 
-.card img:nth-child(odd) {
-    object-fit: cover;
-    margin-left: -65px;  
-    width: 130px;
-    position: relative;
-    border-radius: 50%;
+/******************* Tecnologias */
+
+.h2-title  {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--blue);
 }
 
-/*.card img:nth-child(odd) {
-    object-fit: cover;
-    margin-right: -100px;  
-    width: 130px;
-    position: relative;
-    border-radius: 50%;
-}*/
-
-.card article {
-    position: relative;
+.tecnologias-container {
+    margin-top: 15rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;    
 }
 
-.tecnologias {
-    display: flex;
-    flex-flow: row wrap;   
-}
-
-.tecnologias .card:hover {
-    transform: scale(1.04);
+.tecnologias div {
+    margin: 0.4rem;
 }
 
 .card {
-    background-image: url(../img/bkg-stacks.jpg);
-    color: #fff;
-    display: block;
-    border-radius: 10px;    
-    width: 768px;
-    opacity: .8;
-    
-    padding-top: 10px;
-    margin-bottom: 40px;
-    margin-left: 50px;
-    transition: all 0.2s;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 15px;
+    border: 5px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2rem;
+    border-top: 2rem;
 }
 
-.text-card {
-    text-align: justify;
-    text-indent: 1em;
-    padding: 0.8em;
-    line-height: normal;
-
+.tecnologias p {
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    text-align: center;
 }
 
-.title-card {
-    padding-left: 1.5em;
-    background-image: linear-gradient(to right, rgba(0, 108, 125, 0.2),rgba(255, 255, 255, 0.6));
-    color: #fff;
+.card picture {
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
-/*.tecnologia article {
+.tecnologias {
+    margin-top: 6rem;
     display: flex;
-    justify-content: end;
-}*/
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
 
-.slider {
+.card img {
+    filter: grayscale(0.95);
+    transition: 0.5s all;
+}
+
+.tecnologias .card img:hover {
+    transform: scale(1.2);
+    filter: none;
+}
+
+/*.slider {
     display: none;
     position: absolute;
     left: 0;
@@ -361,7 +329,7 @@ blockquote {
 .slider-card3 {
     opacity: 1;
     background: rgba(17, 0, 255, 0.151);
-}
+} */
 
 .paralax-fundo {
     background-image: url(../img/matrix-global.jpg);
@@ -374,16 +342,56 @@ blockquote {
     
 }
 
+/************* Portfolio ************/
+
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20em auto;
+    font-size: 0.8em;
+    width: 100%;
+    /* height: 800px; ******** tirar ***** */
+}
+
+.gallery {
+    margin: 4em auto 5em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    max-width: 80vw;
+    flex: 0 1 auto;
+}
+
+.job {
+    margin: 1em 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* min-width: 250px; */
+    /* width: 100%; */
+    width: clamp(250px, 320px, 350px);      
+}
+
+.gallery figure img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/************ Matrix ****************/
 .matrix {
     display: flex;
     justify-content: center;
     padding-top: 20rem;
-    
+       
 }
 
 .paralax-fundo article p {
+    
     display: block;
-    padding-top: 1rem;
+    padding-left: 3rem;
     font-family: 'Courier New', sans-serif, monospace;
     font-weight: bold;
     font-size: 1.2em;
@@ -400,20 +408,26 @@ blockquote {
     opacity: 0;
 }
 
+/*********************** Formulário *********************/
 
-/*********************** Rodapé *********************/
+.fale-comigo {
+    margin: 9rem 1rem 15rem 1rem;
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
 
 #contato {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 
 #contato article {
-    margin-top: 120px;
-    background-image: radial-gradient(farthest-side at 100% 0%, rgb(0, 17, 20), #006d7dff 50%, transparent),
-                      radial-gradient(farthest-side at 0% 100%, rgb(0, 17, 20), #006d7dff 70%, transparent);
+    margin-top: 10rem;
+    padding-right: 1rem;
+    background-image: radial-gradient(farthest-side at 100% 0%, rgb(0, 17, 20), var(--blue) 50%, transparent),
+                      radial-gradient(farthest-side at 0% 100%, rgb(0, 17, 20), var(--blue) 50%, transparent);
     color: #fff;
     width: 100%;
     display: flex;
@@ -423,27 +437,62 @@ blockquote {
 }
 
 #contato h2 {
-    margin-top: 50px;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 #contato h2, #contato p {
-    text-shadow: 1px 1px 2px var(--black);
+    text-shadow: -2px -2px 3px var(--black);
 }
 
-/*********************** Formulário *********************/
+#box-contato {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.7rem;
+    margin: 0 1rem 0;
+    display: block;
+    background-color: var(--black);
+    border-left: 2rem solid rgb(20, 20, 20); 
+}
+
+#box-contato h2 {
+    text-transform: normal;
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: normal;
+    padding: 0 0 1em 0;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+
+#box-contato ul {
+    list-style: none;
+}
+
+#box-contato li:nth-of-type(odd) { 
+    padding-left: 1em; 
+    font-size: 1.3em;
+}
+
+#box-contato li:nth-of-type(even) { 
+    padding-left: 2em; 
+    padding-bottom: 1.3em;
+} 
 
 form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    background-color: #fff;
+    background-color: white;
     box-sizing: border-box;
-    width: 80%;
-    margin: 80px 0 150px 0;
-    padding: 70px 30px 10px 30px;
-    border-left: 20px dotted rgba(0, 108, 125, 0.85);
+    width: 60%;
+    padding: 3rem 3rem 0 1rem;
+    border-left: 1.5rem dotted var(--blue);
 }
 
 fieldset {
@@ -451,24 +500,19 @@ fieldset {
     justify-content: center;
     align-items: center;
     width: 95%;
-    height: 80px;
+    height: 7rem;
 
     background-color: white;
     color: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     
     border-radius: 15px;
-    margin: 10px 0;
+    margin: 0.5rem 0;
 }
 
-form fieldset input placeholder {
-    background: blue;
-    color: rgba(228, 12, 12, 0.75); /*ACERTAR esse seletor*/
-}
 
-fieldset:nth-of-type(2), fieldset:nth-of-type(3) {
-    margin-left: 21px;
-    width: 46%;
+fieldset:last-of-type {
+    height: 15rem;
 }
 
 legend {
@@ -482,28 +526,23 @@ legend {
 
 form legend:focus-within {
     font-weight: bold;
-    color: #006d7dff;
+    color: var(--blue);
 }
 
 input {
     width: 97%;
-    margin-top: -5px;
+    padding-left: 1rem;
     border: none;
     outline: none;
 }
 
-fieldset:last-of-type {
-    height: 200px;
-}
-
 fieldset:focus-within {
-    border: 3px solid #006d7dff;
+    border: 3px solid var(--blue);
 }
 
 textarea {
     height: 100%;
     width: 97%;
-    margin-top: -5px;   
     resize: none;
     outline: none;
 }
@@ -514,62 +553,32 @@ textarea {
     width: 250px;
     height: 70px;
     margin: 40px auto 100px auto;
-    background-color: #006d7dff;
+    background-color: var(--blue);
     border-radius: 40px;
 }
 
 #botao-enviar:hover {
-    background: #fff;
-    color: #006d7dff;
-    border: 3px solid #006d7dff;
+    background: var(--white);
+    color: var(--blue);
+    border: 3px solid var(--blue);
     cursor: pointer;
 }
 
-/**Talvez não precise 
-
-.box-contato {
-    margin-top: 50px;
-    padding-top: 30px;  
-    padding-bottom: 40px;  
-    display: block;
-    line-height: normal;
-    background-color: rgb(235, 235, 235);
-    border-left: 50px solid rgb(201, 201, 201);
-    margin-bottom: 50px;
-}
-
-.box-contato h2 {
-    padding-top: 20px;
-    font-weight: normal;
-    padding: 0 0 1em 2em;
-    font-size: 2em;
-}
-
-.box-contato ul {
-    list-style: none;
-}
-
-.box-contato li:nth-of-type(odd) { /*ímpares
-    padding-left: 1em; 
-    font-size: 1.5em;
-}
-
-.box-contato li:nth-of-type(even) { /*pares
-    padding-left: 2em; 
-    padding-bottom: 1em;
-}
-*/
-
+ 
 .rodape-full {    
-    background-color: rgb(0, 17, 20);
-    color: #fff;
+    display: flex;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    color: var(--white);
+    height: 15rem;
 }
 
 .rodape {
-    height: 200px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 3rem;
 }
 
 .nav-rodape {
@@ -582,25 +591,171 @@ textarea {
 }
 
 .rodape div {
-    width: 200px;
+    font-size: 1.6rem;
+    /* width: 100px; */
 }
 
 .rede-social {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
+    margin: 1rem;
+    width: 35px;
+    height: 35px;
+    background-color: white;
     border-radius: 50%;
-}
-
-.rede-social:hover {
     opacity: 0.5;
 }
 
-.nav-rodape .nav1 {
+.nav-rodape .nav1 a:hover, .rede-social:hover {
+    opacity: 1;
+}
+
+.nav-rodape .nav1 a{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
+    opacity: 0.6;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.rodape div:nth-last-child(1) {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+}
+
+.rodape div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+}
+
+
+/****************** Responsivo *******************/
+
+@media (max-width: 870px) {
+    .limited {
+        width: 95vw;
+    }
+
+    #cabecalho {
+        min-height: 85px;
+    }
+
+    .menu-principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-escrito {
+        padding-bottom: .4rem
+    }
+
+    .celular {
+        padding-top: .4rem;
+        border-top: 2px solid;
+        border-image: linear-gradient(to right, transparent, var(--blue), transparent) 1;
+    }
+    
+    .container-topo .nav1 {    
+        width: 12vw;
+        height: 300px;
+     
+        text-transform: uppercase;
+        text-shadow: 0 0 1em;
+    }   
+
+    .sobre-info {
+        height: normal;
+        margin: 1rem 2rem;
+    }
+
+    .fale-comigo {
+        margin-top: 0rem auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        margin: 1rem;
+        width: 80%;
+        min-width: 400px;
+    }
+
+    #contato article {
+        padding: 0 3rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .sobre-info {
+        flex-direction: column;
+        height: normal;
+        margin: 1rem 2rem 20rem 2rem;
+    }
+
+    .img-circular {
+        margin-top: 3rem;
+    }
+
+    .sobre-info {
+        background: none;
+    }
+
+    .paralax-fundo {
+        height: 400px;
+    }
+
+    .matrix {
+        font-weight: normal;
+        padding-top: 10rem;
+    }
+
+    #cursor {
+        font-size: 5rem;
+        text-indent: 1rem;
+    }
+
+    #cabecalho {
+        min-height: 100px;
+    }
+
+    .celular {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: .4rem;
+        border-top: 2px solid;
+        border-image: linear-gradient(to right, transparent, var(--blue), transparent) 1;
+    }
+
+    .celular img {
+        display: none;
+    }
+
+    .celular div:nth-child(2) {
+        width: 100%;
+        text-align: center;
+    }
+
+    .celular div:nth-last-child() {
+        min-width: 300px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    fieldset {
+        width: 100%;
+    }
 }
