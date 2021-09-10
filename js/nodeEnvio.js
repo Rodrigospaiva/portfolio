@@ -1,49 +1,28 @@
-const express = require('express');
-const nodemailer = required('nodemailer');
-const app = express();
+const nodemailer = require('nodemailer');
 
-const port = 3000
+const smtp_config = require('./smtp')
 
-const user = 'engenharia.rsilva@gmail.com'
-const pass = '44809090'
-
-app.get('/', (req, res) => res.send('Hello World in Node.js!'));
-
-app.get('/send', (req, res) => {
-
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {user, pass}
-            
-    })
-
-    transporter.sendMail({
-        from: user,
-        to: user,
-        replyTo: 'desenvolvimento.rsp@gmail.com',
-        subject: 'Seja bem vindo! Rodrigo rs',
-        text: "Esse é um teste enviado do Back end do Node.js."
-    }).then(info=>{
-        res.send(info)
-    }).catch(error=>{
-        res.error(error)
-    })
-
+const transporter = nodemailer.createTransport({
+    host: smtp_config.host,
+    port: smtp_config.port,
+    secure: false,
+    auth: {
+        user: smtp_config.user,
+        pass: smtp_config.pass
+    }
 })
 
+async function run() {
 
-// const handlebars = require("express-handlebars");
-// const bodyParser = require('bodyParser');
+    const mailSend = await transporter.sendMail({
+        text: 'Texto do e-mail teste',
+        subject: 'Assunto do email teste',
+        from: 'Rodrigo <engenharia.rsp@gmail.com>',
+        to: ['desenvolvimento.rsp@gmail.com', 'engenharia.rsp@gmail.com']
+    });
 
-// // Template Engine 
-// app.engine('handlebars', handlebars({defaultLayout: 'main'}))
-// app.set('view engine', 'handlebars')
+    console.log(mailer)
 
-// // Rota
-// app.post('/envio', function(req, res) {
-//     res.send('Form recebido!!')
-// })
+}
 
-// // bodyParser
-// app.use(bodyParser.urlencoded({exteded: false}))
-// app.use(bodyParser.json())
+run()

@@ -2,11 +2,9 @@
 
 
 /****************** Cabeçalho *******************/
-#inicio {
-   
+#inicio {   
     display: block;
     background-image: url(../img/backgrounds/1.jpg);
-
     background-position: center;
     background-position-y: 1px;
     background-position-x: -1px;
@@ -96,7 +94,7 @@
     align-items: center;
     text-align: center;
     color: #fff;    
-    height: 80%;
+    height: 100%;
 }
 
 .container-topo img {
@@ -108,7 +106,12 @@
     padding-top: 40px;
     color: black;
     text-transform: uppercase;
-    text-shadow: 0px 10px 4px var(--black), 0px 0px 4px var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
+    text-shadow: 0px -5px 4px var(--black),
+                 0px 0px 30px white,
+                 0px 0px 30px white,
+                 0px 0px 30px white,
+                 0px 0px 30px white,
+                 0px 0px 30px white;
     font-size: 1.2em;
 }
 
@@ -119,7 +122,6 @@
     align-items: center;
     justify-content:center;
     text-transform: uppercase;
-    text-shadow: 1px 1px 1em var(--white), 1px 1px 1em var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
 }
 
 .container-topo .nav1 a {
@@ -130,13 +132,21 @@
     font-weight: 500;
     border-bottom: 1px solid transparent;
     transition: all 0.3s;
-    text-shadow: 0px 5px 4px var(--black), 0px 0px 4px var(--white),1px 1px 1em var(--white),1px 1px 1em var(--white);
-
+    text-shadow:    0px 5px 4px var(--black),
+                    0px 0px 30px white,
+                    0px 0px 30px white,
+                    0px 0px 30px white,
+                    0px 0px 30px white,
+                    0px 0px 30px white;
+    line-height: 6rem;
+    padding-bottom: 1rem;
 }
 
 .container-topo .nav1 a:hover {
+
     border-bottom: 3px solid var(--blue);
-    padding-bottom: 1rem;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
 }
 
 
@@ -371,7 +381,14 @@ blockquote {
     border: 1px solid rgba(0, 0, 0, 0.1);
     /* min-width: 250px; */
     /* width: 100%; */
-    width: clamp(250px, 320px, 350px);      
+    width: clamp(250px, 320px, 350px);   
+
+}
+
+.job a {
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
 }
 
 .gallery figure img{
@@ -395,7 +412,9 @@ blockquote {
     font-family: 'Courier New', sans-serif, monospace;
     font-weight: bold;
     font-size: 1.2em;
-    text-shadow:01px 0px 10px black, 0 0 1em #fff, 0 0 1em rgb(0, 255, 55);  
+    text-shadow:    0 0 1em #fff,
+                    0 0 1em rgb(0, 184, 40),
+                    1px 0px 2px black;  
 }
 
 #cursor {
@@ -521,7 +540,6 @@ legend {
     text-shadow: 0 -1px 1px white;
     margin-top: -10px;
     line-height: 1.9;
-    outline: none;
 }
 
 form legend:focus-within {
@@ -701,6 +719,18 @@ textarea {
         flex-direction: column;
         height: normal;
         margin: 1rem 2rem 20rem 2rem;
+    }
+
+    .dev p {
+        width: 100vw;
+        padding: 1rem 2em;
+        text-indent: 2em;
+        text-align: justify;
+    }
+
+    .dev p:nth-child(3) {
+        width: 100vw;
+        padding: 0em 2em 2em;       
     }
 
     .img-circular {
