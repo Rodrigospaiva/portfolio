@@ -50,28 +50,34 @@
 
         <div class="container-topo">
 
-            <nav class="nav1">
-                <ul>
-                    <li><a href="#sobre">Quem sou</a></li>
-                    <li><a href="#tecnologias">Tecnologias</a></li>
-                </ul>
-            </nav>
+                <video class="bg_video" width="320" height="240" loop="true" autoplay muted>
+                    <source src="./video/Mountains in the fog.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-            <div>
-                <figure>
-                    <img src="img/Rosto-fundo-transp.png" alt="logotipo" />
-                </figure>
+                <nav class="nav1">
+                    <ul>
+                        <li><a href="#sobre">Quem sou</a></li>
+                        <li><a href="#tecnologias">Tecnologias</a></li>
+                    </ul>
+                </nav>
+
                 <div>
-                    <h1> Seja muito Bem-vindo(a)</h1>
-                </div>
-            </div>      
-                
-            <nav class="nav1">
-                <ul>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>  
+                    <figure>
+                        <img src="img/Rosto-fundo-transp.png" alt="logotipo" />
+                    </figure>
+                    <div>
+                        <h1> Seja muito Bem-vindo(a)</h1>
+                    </div>
+                </div>      
+                    
+                <nav class="nav1">
+                    <ul>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav> 
+    
 
         </div>                   
        
@@ -81,7 +87,11 @@
             <!--<div class="absolute">
             </div>-->
 
-            <section id="sobre">                
+            <section id="sobre">  
+                
+                <div class="teste">
+                    <h2 class="clip">Quem sou</h2>
+                </div>
 
                 <div class="sobre-container limited">
 
@@ -266,6 +276,14 @@
                     <div class="job">
                         <figure>
                             <a href="#">
+                                <img src="img/jobs/vertical-rio.png" alt="Imagem da VertRio">
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="job">
+                        <figure>
+                            <a href="#">
                                 <img src="img/jobs/cm-life.png" alt="Imagem da CM-Life">
                             </a>
                         </figure>
@@ -292,70 +310,74 @@
 
             </div>
 
-            <div id="contato" class="limited">
+            <div id="contato-fundo">
 
-                <article>
+                <div id="contato" class="limited">
 
-                    <div>
-                        <h2>Fale Comigo</h2>
-                        <p>Preencha os campos abaixo que em breve retornarei o contato.</p>                        
-                    </div>
+                    <article>
 
-                    <div class="fale-comigo">
-
-                        <div id="box-contato">
-                            <h2>Principais Contatos</h2>
-                            <ul>
-                                <li>Celular: </li>
-                                <li>12 99152-1288: </li>
-                                <li>Email: </li>
-                                <li>contato@codersp.com </li>
-                                <li>Local: </li>
-                                <li>São José dos Campos - SP </li>
-                            </ul>
+                        <div>
+                            <h2>Fale Comigo</h2>
+                            <p>Preencha os campos abaixo que em breve retornarei o contato.</p>                        
                         </div>
 
-                        <form method="post" action="email.php">
-                            <fieldset>
-                                <legend> Nome* </legend>
-                                <input  required
-                                        type="text"
-                                        name="nome"
-                                        placeholder="Digite aqui" />
-                            </fieldset>
-                            <fieldset>
-                                <legend> E-mail* </legend>
-                                <input  type="email"
-                                        name="email"
-                                        placeholder="email@exemplo.com" />
-                            </fieldset>
-                            <fieldset>
-                                <legend>Telefone </legend>
-                                <input  type="number"
-                                        name="telefone"
-                                        min="11111111"
-                                        max="999999999999"
-                                        placeholder="Ex: (12) 99999-9999" />
-                            </fieldset>
-                            <fieldset>
-                                <legend> Assunto* </legend>
-                                <input  type="text"
-                                        name="assunto"
-                                        placeholder="Digite aqui" />
-                            </fieldset>
-                            <fieldset>
-                                <legend> Mensagem* </legend>
-                                <textarea   name="mensagem"
-                                            maxlength="1024"
-                                            placeholder="Escreva aqui a sua mensagem"></textarea>
-                            </fieldset>
-                            <input id="botao-enviar" type="submit" value="Enviar mensagem" />
+                        <div class="fale-comigo">
+
+                            <div id="box-contato">
+                                <h2>Principais Contatos</h2>
+                                <ul>
+                                    <li>Celular: </li>
+                                    <li>12 99152-1288: </li>
+                                    <li>Email: </li>
+                                    <li>contato@codersp.com </li>
+                                    <li>Local: </li>
+                                    <li>São José dos Campos - SP </li>
+                                </ul>
+                            </div>
+
+                            <form method="post" action="email.php">
+                                <fieldset>
+                                    <legend> Nome* </legend>
+                                    <input  required
+                                            type="text"
+                                            name="nome"
+                                            placeholder="Digite aqui" />
+                                </fieldset>
+                                <fieldset>
+                                    <legend> E-mail* </legend>
+                                    <input  type="email"
+                                            name="email"
+                                            placeholder="email@exemplo.com" />
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Telefone </legend>
+                                    <input  type="number"
+                                            name="telefone"
+                                            min="11111111"
+                                            max="999999999999"
+                                            placeholder="Ex: (12) 99999-9999" />
+                                </fieldset>
+                                <fieldset>
+                                    <legend> Assunto* </legend>
+                                    <input  type="text"
+                                            name="assunto"
+                                            placeholder="Digite aqui" />
+                                </fieldset>
+                                <fieldset>
+                                    <legend> Mensagem* </legend>
+                                    <textarea   name="mensagem"
+                                                maxlength="1024"
+                                                placeholder="Escreva aqui a sua mensagem"></textarea>
+                                </fieldset>
+                                <input id="botao-enviar" type="submit" value="Enviar mensagem" />
+                            
+                            </form>                    
+                                        
+                            </article>
+                        </div>                             
                         
-                        </form>                    
-                                    
-                        </article>
-                    </div>                             
-                    
+                    </div>
+
                 </div>
 
             </div>

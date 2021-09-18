@@ -13,7 +13,7 @@ function cursorlink() {
 
 //  // categoria para retirada do layout
 
-//  const vanish = document.querySelectorAll('disappear')
+//  cons t vanish =document.querySelectorAll('disappear')
 
 //  function remove(vanish) {
 
