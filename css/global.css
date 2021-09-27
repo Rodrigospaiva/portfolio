@@ -10,8 +10,6 @@
 }
 
 html {
-background: var(--white);
-
     font-family: 'Segoe UI', sans-serif;
     color: var(--black);
 
@@ -19,12 +17,13 @@ background: var(--white);
     
     --blue: #006c7dd9;
     --black: rgba(0, 0, 0, 0.7);
-    --white: rgba(255, 255, 255, 0.5);
+    --white: rgb(250, 250, 250);
     --fundobg: #F2F3F7;
 }
 
 body, button, input, textarea, fieldset, select, placeholder {
     font-size: clamp(14px, 1.9rem, 2vw);  
+    background: var(--white);
 }
 
 ul, ol, li {

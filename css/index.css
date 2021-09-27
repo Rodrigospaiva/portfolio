@@ -6,7 +6,7 @@ main, #main-footer {
 
 #contato-fundo {
     display: block;
-    background-image: url(../img/backgrounds/pexels-david-underland-3237941.jpg);
+    background-image: url(../img/backgrounds/predios-contato.webp);
     background-position: center;
     background-position-y: 1px;
     background-position-x: -1px;
@@ -21,7 +21,7 @@ main, #main-footer {
 
 .container-topo {   
     display: block;
-    background-image: url(../img/backgrounds/1.jpg);
+    background-image: url(../img/backgrounds/predios-cabecalho.webp);
     background-position: center;
     background-position-y: 1px;
     background-position-x: -1px;
@@ -126,23 +126,6 @@ main, #main-footer {
     text-transform: uppercase;
 }
 
-.container-topo .nav1 li, .container-topo .nav2 li {
-    /* border: 1px solid rgba(0, 0, 0, 0.2); */
-    transition: all 0.3s;
-    /* text-shadow:    0px 5px 4px var(--black), 
-                    0px 0px 30px white,
-                    0px 0px 30px white,
-                    0px 0px 30px white,
-                    0px 0px 30px white,
-                    0px 0px 30px white;*/
-                
-    line-height: 6rem;
-    padding: 0 1em;
-    margin: 1em;
-    
-    background: rgba(255, 255, 255, 0.8);
-}
-
 .container-topo .nav1 li:hover, .container-topo .nav2 li:hover {
     transform: scale(1.2);
     transition: all 0.2s ease;
@@ -174,8 +157,10 @@ main, #main-footer {
                                         rgba(255, 255, 255),
                                         rgba(255, 255, 255, 0));
     border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent) 1;
+    line-height: 4em;
     justify-content: right;
-    margin-right: -2em;
+    padding: 0 2em;
+    margin-right: -8em;
 }
 
 .container-topo .nav2 li {
@@ -184,8 +169,10 @@ main, #main-footer {
     rgba(255, 255, 255),
     rgba(255, 255, 255, 0));
     border-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent) 1;
+    line-height: 4em;
     justify-content: left;
-    margin-left: -2em;
+    padding: 0 2em;
+    margin-left: -8em;
 }
 
 .container-topo .nav1 a, .container-topo .nav2 a {
@@ -194,6 +181,11 @@ main, #main-footer {
     color: black;
     font-weight: 500;
     cursor: pointer;
+}
+
+header {
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, var(--blue), transparent, var(--blue)) 60;
 }
 
 
@@ -209,78 +201,88 @@ main, #main-footer {
 
 /* Sobre */
 
-#sobre {    
-    border-top: 5px solid;
-    border-image: linear-gradient(to right, var(--blue), transparent, var(--blue)) 60;
-    background: white;
+.captur {
+    height: 3em;
 }
 
-.bg_fundo {
-    display: block;
-    font-size: 2em;
-    text-transform: uppercase;
-    background-image: url(../img/backgrounds/pexels-david-underland-3237941.jpg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: auto;
-    filter: brightness(80%);
-    margin: 6em auto -2em;
-    height: auto;
-    text-align: center;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: #00d9fa15;
+#sobre {    
+    background: white;
 }
 
 .sobre-container {
     display: flex;
-    justify-content: center;
-    margin: 5em auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sobre-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 100px;
     background-image: radial-gradient(circle 20em, rgba(0, 0, 0, 0.3), transparent);
-    display: flex;
     align-items: center;
+    width: 100%;
     height: 200px;
 }
 
-.dev {
-    width: 100%;
-    text-align: left;
+.h3-title {
+    text-transform: uppercase;
+    font-weight: normal;
+    border-bottom: 2px solid ;
+    border-image: linear-gradient(to right, transparent, var(--blue), transparent) 1;
+    color: var(--blue);
+    margin: 1em;
 }
 
-.dev p:nth-child(3) {
-    width: 40vw;
-    padding: 1em 0;
+.sobre-container article {
+    margin-bottom: 3em;
 }
+
+.dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* .dev p:nth-child(3) {
+    width: 20vw;
+    padding: 1em 0;
+} */
 
 .img-circular {
     width: 250px;
     border-radius: 50%;
     box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.6);
-    right: 0px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
-.logo img {
-    width: 200px;
-}
-
-.quote {
+.diferenciais {
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: end;
+    min-width: 300px;
+    max-width: 400px;
+    text-align: center;
 }
 
-.quote p {
-    padding: 1rem 0;
+p {
+   justify-content: justify;
 }
 
-blockquote::before {
+.make {
+    margin: 3em auto;
+    text-align: center;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* blockquote::before {
     content: open-quote;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5rem;
@@ -305,13 +307,7 @@ blockquote {
         display: none;
     }
 }
-
-.label:not(p:nth-child(2)){
-    color: var(--blue);
-    text-transform: uppercase;
-    font-size: 1.2em;
-    font-weight: 500;
-}
+*/
 
 .skills {
     display: flex;
@@ -330,12 +326,12 @@ blockquote {
     text-align: center;
     font-weight: 400;
     font-size: 3rem;
-    margin-bottom: 1rem;
+
     color: var(--blue);
 }
 
 .tecnologias-container {
-    margin-top: 15rem;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;    
 }
@@ -382,7 +378,7 @@ blockquote {
 }
 
 .paralax-fundo {
-    background-image: url(../img/backgrounds/matrix-global.jpg);
+    background-image: url(../img/backgrounds/matrix-paralax.webp);
     background-attachment: fixed;
     background-repeat:  no-repeat;
     background-position: center;
@@ -400,10 +396,8 @@ blockquote {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 20em auto;
     font-size: 0.8em;
     width: 100%;
-    /* height: 800px; ******** tirar ***** */
 }
 
 .gallery {
@@ -420,8 +414,6 @@ blockquote {
 .job {
     margin: 1em 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* min-width: 250px; */
-    /* width: 100%; */
     width: clamp(250px, 320px, 350px);   
     transition: 0.3s;
 }
@@ -445,7 +437,7 @@ blockquote {
 .matrix {
     display: flex;
     justify-content: center;
-    padding-top: 5em;      
+    padding-top: 6em;      
 }
 
 .paralax-fundo article p {    
@@ -521,8 +513,9 @@ blockquote {
 }
 
 #box-contato {
+    box-sizing: border-box;
     max-width: 400px;
-    min-width: 400px;
+    min-width: 320px;
     height: 400px;
     display: block;
     border-radius: 5px;
@@ -639,7 +632,7 @@ textarea {
     align-items: center;
     background-color: rgb(20, 20, 20);
     color: var(--white);
-    height: 15rem;
+    height: auto;
 }
 
 .rodape {
@@ -650,16 +643,16 @@ textarea {
     padding: 3rem;
 }
 
-.nav-rodape {
-    width: 200px;
+.nav-rodape .nav1{
+    width: auto;
     height: 80px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .rodape div {
+    text-align: center;
     font-size: 1.6rem;
     /* width: 100px; */
 }
@@ -689,6 +682,7 @@ textarea {
     opacity: 0.6;
     font-size: 1.6rem;
     line-height: 3rem;
+    padding: 0 1.5em;
 }
 
 .rodape div:nth-last-child(1) {
@@ -709,6 +703,10 @@ textarea {
 /****************** Responsivo *******************/
 
 @media (max-width: 870px) {
+    article {
+        font-size: 1.1em;
+    }
+
     .limited {
         width: 95vw;
     }
@@ -717,13 +715,17 @@ textarea {
         min-height: 85px;
     }
 
+    #sobre, .captur {
+        background-color: var(--white);
+    }
+
     .menu-principal {
         display: flex;
         flex-direction: column;
     }
 
     .logo-escrito {
-        padding-bottom: .4rem
+        padding: 0.4rem
     }
 
     .celular {
@@ -734,8 +736,31 @@ textarea {
     }
     
     .sobre-info {
-        height: normal;
-        margin: 1rem 2rem;
+        flex-direction: column;
+        height: auto;
+        width: unset;
+        margin-top: 2rem;
+        background-image: none;
+    }
+
+    .my-card {
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        background: white;
+        padding: 0 1em 2em 1em;
+        margin: 1em;
+    }
+
+    .eu {
+        margin: 1em;
+    }
+
+    .dev, .diferenciais {
+        height: auto;
+    }
+
+    .make {
+        order: -1;
     }
 
     .fale-comigo {
@@ -749,6 +774,14 @@ textarea {
         margin: 1rem;
         width: 80%;
         min-width: 320px;
+    }
+
+    #contato article {
+        border-radius: 3em;
+    }
+
+    #contato article p {
+        padding: 1 3em;
     }
 
     #contato article div:first-child {
@@ -772,17 +805,18 @@ textarea {
         max-height: 80vh;
     }
 
+    /* #cabecalho .nav1 {
+        margin-right: -50em;
+    }
+
+    #cabecalho .na2 {
+        margin-left: -50em;
+    } */
+
     .sobre-info {
         flex-direction: column;
         height: normal;
-        margin: 1rem 2rem 20rem 2rem;
-    }
-
-    .dev p {
-        width: 100vw;
-        padding: 1rem 2em;
-        text-indent: 2em;
-        text-align: justify;
+        margin-bottom: 5em;
     }
 
     .dev p:nth-child(3) {
@@ -834,7 +868,11 @@ textarea {
     }
 
     .celular div:nth-last-child() {
-        min-width: 300px;
+        min-width: 320px;
+    }
+
+    .eu {
+        margin: -1em 0 1em 0;
     }
 
     .job {
@@ -845,16 +883,26 @@ textarea {
         transform: scale(0.9);
     }
 
-    form {
-        width: 100%;
-    }
-
-    fieldset {
-        width: 100%;
+    .gallery {
+        margin-bottom: 3em;
     }
 
     #box-contato {
         width: 100%;
         margin-top: 1em;
+    }
+
+    .rodape .nav1 {
+        height: 3em;
+    }
+
+    .rodape {
+        height: auto;
+        padding: 1.5em 0;
+        flex-direction: column;
+    }
+
+    .nav-rodape .nav1 a{
+        padding: 0 1em;
     }
 }
